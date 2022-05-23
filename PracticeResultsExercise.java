@@ -3,39 +3,40 @@ package com.qa.practice230522;
 public class PracticeResultsExercise {
 
 	
-	int Biology = 100;
-	int Chemistry = 120;
-	int Physics = 102;
-	int Total = Biology + Chemistry + Physics;
-	int Percent = Total * 100 / 450;
+	public static int Biology = 100;
+	public static int Chemistry = 120;
+	public static int Physics = 102;
+	public static int Total = Biology + Chemistry + Physics;
+	public static int Percent = Total * 100 / 450;
 	
-// unsure if I've put variables in right place or if I can use them in other methods when they're just declared in the class like this? 
-// Might be the problem further down?
+
 	
 			
 	public static void main(String[] args) {
-		biologyResults();
-	// 14 doesn't work when biologyResults is not static 
-		totalPercentage();
-	// same issue - static and non static errors that conflict whenever I change between static and non static
-		
+		Results();
+	totalPercentage();	
 		
 	}
 	
-	public static void biologyResults()
+	public static void Results()
 	{
-	System.out.println(Biology);
-	System.out.println(Total);
-	// 22 and 23 don't work when biologyResults is static - need extra explanation on use of static and how to use variables
-	// in other methods when declared in class 
-		
-		
+	System.out.println("Biology results -");
+	System.out.println(Biology + "/150");
+	System.out.println("Chemistry results-");
+	System.out.println(Chemistry + "/150");
+	System.out.println("Physics results -");
+	System.out.println(Physics + "/150");
+	System.out.println("Total grade - ");
+	System.out.println(Total + "/450");
 	}
 	
-	public void totalPercentage()
+
+	
+	public static void totalPercentage()
 	{
-	System.out.println(Percent);
-	// gives error in line 19, 'cannot make static reference'
+	System.out.println("Overall grade perecentage -");
+	System.out.println(Percent + "%");
+	
 		
 		
 	}	
